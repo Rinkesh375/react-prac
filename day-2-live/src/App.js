@@ -1,25 +1,27 @@
 
 import './App.css';
+import Avatar from './Avatar';
 
-const userDetails = {
-  name:"Trump",
-  image:"https://imgs.search.brave.com/38tUhye_CDwkS7kHOChf284Gq-GzoJTqZogYoVVAcJ8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/Z2FubmV0dC1jZG4u/Y29tLy1tbS0vNzAz/NzM1MjBiZjI3YmY2/M2RiMTJhMjBjMjk4/ZjgxMjBlNzZmMmIx/OS9jPTAtMC01MTY1/LTI5MTgmcj14MTY4/MyZjPTMyMDB4MTY4/MC9sb2NhbC8tL21l/ZGlhLzIwMTcvMDUv/MzEvVVNBVE9EQVkv/VVNBVE9EQVkvNjM2/MzE4MTI2NzQwMjc1/NDM1LUFQLVRydW1w/LVVTLUc3LmpwZw"
-}
-function Avatar({image,name}){
-  return(<>
-  <img src={image} alt={name} />
-  <p>{name}</p>
-  </>)
-}
+
 
 function App() {
 
   return (
-    <div className="App">
-      <p>Rinkesh</p>
-      <Avatar {...userDetails} />
-    </div>
-  );
+    <>
+     <Avatar userDetails={{name:"Trump",
+  image:"https://imgs.search.brave.com/Cm9J5Bh4qDZLLrK0wr0YkhNLRhCm3-tbeNT6EO5EKEo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9hcGku/dGltZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTYvMDcv/cnR4Mmp2aTguanBn",
+  rounded:true,
+  hideName:false
+}} />
+
+<Avatar userDetails={{name:"Biden",
+image:"https://imgs.search.brave.com/-VVKSiu2YLK_7HFZnXGCSKLcvgxNh-wHD-rMVPLpqtg/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pMS53/cC5jb20vdWVzaXdv/cmxkLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8xMS9C/SURFTi5qcGc_Zml0/PTEyMDAlMkMxMjAw/JnNzbD0x",
+rounded:false,
+hideName:true
+}} />
+    </>
+ 
+  )
 }
 
 export default App;
