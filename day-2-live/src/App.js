@@ -1,18 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-function Button ({text,onClick}){
-  return <button onClick={onClick}>{text}</button>
+function formatData(date){
+return new Intl.DateTimeFormat("en-US",
+    {weekday:"long"}
+).format(date)
 }
-function Header({text}){
-    return <h1>{text}</h1>
-}
+
 function App() {
 
   return (
     <div className="App">
-    <Header text="COUNTER - 0"/>
-    <Button text="ADD" onClick={()=>alert(`ADD has been clicked`)}/>
-    <Button text="REDUCE" onClick={()=>alert(`REDUCE has been clicked`)} />
+     <h1>Date {formatData(new Date())}</h1>
     </div>
   );
 }
